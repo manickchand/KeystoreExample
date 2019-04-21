@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:padding="16dp">
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Text to encrypt"
+            android:id="@+id/et_text"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Your Alias"
+            android:layout_below="@+id/et_text"
+            android:id="@+id/et_alias"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Encrypt"
+            android:id="@+id/btn_encrypt"
+            android:layout_below="@+id/et_alias"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:onClick="toEncrypt"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Result"
+            android:layout_below="@+id/btn_encrypt"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/colorAccent"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Result text"
+            android:layout_below="@+id/btn_encrypt"
+            android:layout_marginTop="50dp"
+            android:id="@+id/tv_response"/>
+
+    <ListView
+            android:id="@+id/listAlias"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_response"
+            android:layout_marginTop="16dp"/>
+
+</RelativeLayout>
